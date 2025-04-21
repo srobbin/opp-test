@@ -1,0 +1,23 @@
+/* Project 2 specific styles */
+
+.project2-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.project2-content {
+  background-color: #4cc9f0;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.project2-box {
+  background-color: #4361ee;
+  padding: 20px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}

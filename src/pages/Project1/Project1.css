@@ -1,0 +1,23 @@
+/* Project 1 specific styles */
+
+.project1-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.project1-content {
+  background-color: #3a0ca3;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.project1-box {
+  background-color: #f72585;
+  padding: 20px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
