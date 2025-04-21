@@ -10,6 +10,7 @@ import Home from './pages/Home'
 const pageModules = import.meta.glob('./pages/**/index.jsx', { eager: true })
 
 // Generate routes dynamically
+// eslint-disable-next-line no-unused-vars
 const routes = Object.entries(pageModules).map(([path, module]) => {
   // Extract route name from path (e.g., './pages/Project1/index.jsx' -> 'project1')
   const routePath = path.match(/\.\/pages\/(.+?)\/index\.jsx$/)?.[1]?.toLowerCase()
@@ -22,8 +23,8 @@ const routes = Object.entries(pageModules).map(([path, module]) => {
   }
 }).filter(Boolean)
 
-const router = createBrowserRouter([
-  {
+const router = createBrowserRouter(
+  [{
     path: '/',
     element: <Layout />,
     children: [
@@ -33,8 +34,11 @@ const router = createBrowserRouter([
       },
       ...routes,
     ],
-  },
-])
+  }],
+  {
+    basename: import.meta.env.BASE_URL,
+  }
+)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
